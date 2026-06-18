@@ -15,10 +15,12 @@ body {
     display: grid;
 
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-rows: 1.5fr 3fr 2fr;
 
     width: 100vw;
     height: 100vh;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .sideBar {
@@ -55,14 +57,65 @@ body {
 }
 
 header {
-    border: 2px solid blue;
-
+    border: 2px solid blue; 
     grid-column: 2 / -1;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    font-size: 1.25rem;
 
 }
 
+header .upper {
+    display: grid;
+    grid-template-columns: 1fr 4fr repeat(4, 1fr);
+}
+
+.upper > div, .upper > p {
+    text-align: center;
+    align-self: center;
+}
+
+.upper input{
+    background-color: rgb(235, 235, 233);
+    border-radius: 16px;
+
+    height: 60%;
+
+    align-self: center;
+
+}
+
+
+header .lower {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr repeat(3, 1fr);
+}
+
+.lower > div {
+    align-self: center;
+}
+
+.lower .button {
+    justify-self: center;
+
+    background-color: rgb(8, 103, 199);
+    color: azure;
+    padding: 1rem 3rem;
+
+    border-radius: 12px;
+
+}
+
+.lower p , .upper p {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
 main {
-    border: 2px solid green;
+    /* border: 2px solid green; */
 
     grid-column: 2 / -1;
     grid-row: 2 / -1;
