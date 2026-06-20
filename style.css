@@ -40,14 +40,25 @@ body {
 
 .sideBar > .item {
     padding-left: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    align-items: center;
 }
 
 .sideBar h2 {
-    text-align: center;
+   
     padding: 1rem;
     margin-bottom: 2rem;
 
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    align-items: center;
+
 }
+
 
 .sideBar > .Spacer {
     grid-row: 8/10;
@@ -69,31 +80,46 @@ header {
 
 header .upper {
     display: grid;
-    grid-template-columns: 1fr 4fr repeat(4, 1fr);
+    grid-template-columns: 0.25fr 1fr 4fr 2fr repeat(3, 1fr);
 }
 
-.upper > div, .upper > p, .lower > .UL {
+.upper > div, .upper > p, .upper > svg, .lower > .UL {
     text-align: center;
     align-self: center;
+}
+
+.upper > svg {
+    justify-self: center;
+}
+
+.upper > svg:first-of-type {
+    justify-self: start;
+    margin-right: 1rem;
 }
 
 .upper input{
     background-color: rgb(235, 235, 233);
     border-radius: 16px;
 
-    height: 60%;
+    height: 40%;
+    width: 100%;
 
     align-self: center;
 
     padding-left: 1rem;
+    margin-left: -60px;
 
 }
 
 
 header .lower {
     display: grid;
-    grid-template-columns: 1fr 2fr 3fr repeat(3, 1fr);
+    grid-template-columns: 0.25fr 1fr 2fr 3fr repeat(3, 1fr);
 
+}
+
+.Spacera {
+    grid-row: 1/2;
 }
 
 .lower > .button  {
@@ -256,6 +282,9 @@ main h2 {
     align-self: self-start;
 
     font-size: 50px;
+
+    justify-self: self-start;
+
 }
 
 .pink {
@@ -272,4 +301,43 @@ main h2 {
 
 .crimson {
     background-color: crimson;
+}
+
+.sideBar h2 svg {
+    width: 3rem;
+    height: 3rem;
+    fill: white;
+}
+
+.sideBar .item svg {
+    width: 2rem;
+    height: 2rem;
+    fill: white;
+}
+
+header .upper svg {
+    width: 3rem;
+    height: 3rem;
+    fill: black;
+
+}
+
+.projects .icons {
+
+    display: grid;
+    grid-template-columns: 3fr repeat(3,1fr);
+
+}
+
+.projects .icons svg {
+    width: 2rem;
+    height: 2rem;
+    fill: black;
+
+    justify-self: end;
+    align-self: center;
+}
+
+.projects .icons svg:first-child{
+    grid-column-start: 2;
 }
